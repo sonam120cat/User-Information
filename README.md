@@ -1,27 +1,50 @@
-# Userinformation
+1.	Installation Steps.
+=>check for node and npm in the system,run the below commands for checking availability of node and npm respecively.
+node --version
+npm --version
+If above commands give error then:
+=>Step 1: Download the Installer
+  Download the Windows Installer from NodeJs official website(https://nodejs.org/en/download). Make sure you have downloaded the latest version of NodeJs. It includes the NPM package manager.
+=>Step 2: Install Node.js and NPM
+  After choosing the path, double-click to install .msi binary files to initiate the installation process. Then give access to run the application.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+  You will get a welcome message on your screen and click the “Next” button. The installation process will start.
+  Choose PaChoose Path to Install Node.js
+  By clicking on the Next button, you will get a custom page setup on the screen. Make sure you choose npm package manager , not the default of Node.js runtime . This way, we can install Node and NPM simultaneously.
 
-## Development server
+  =>After this process ends you can check with above mentioned commands(node --version , npm --version) if node and npm get installed correctly.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+=>For getting angular in the system ,run the following command:
+npm install - g @angular/cli
+To check if it gets correctly installed, run the following command
+ng version
 
-## Code scaffolding
+If you get error then set the path for angular in Environment varaibles.
+=>Search for environment variable in your system.
+Under User variables:
+=>Click on New,set the variable name as PATH  and in the value add these two paths in two seperate lines.
+C:\Users\Sushil Kumar\AppData\Roaming\npm----For NPM
+C:\Users\Sushil Kumar\AppData\Roaming\npm\node_modules\@angular\cli\bin----For Angular
+=>Close the opened command prompts and then again check for angular version.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2.	Building the Application
+=>Execute the below command to create a new angular project
+ng new userinformation
+While creating application it would be asked to choose for angular routing then type "Yes" for it.It would also be asked for choosing stylesheet for the application.
+=>For creating a new component ,execute the below command:
+ng generate component userinformation
+=>For creating a new service in a seperate folder ,execute below command
+ng generate service share/utility
+=>For running the application,execute the below command:
+npm start.
 
-## Build
+3.	How to run the Application Locally
+=>Take clone from git repo following the below command:
+  git clone -b master https://github.com/sonam120cat/User-Information.git
+=>navigate inside the application - Open the application in visual studio code(IDE).
+open the terminal for running the application (shortcut Ctrl + `).
+Execute this command : npm install (For getting node modules).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+=>Execute the following command to run the application:
+npm start.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
